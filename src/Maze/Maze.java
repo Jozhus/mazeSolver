@@ -31,7 +31,7 @@ public class Maze implements MazeADT {
     }
 
     @Override
-    public void markPath(int r, int c) {
+    public void markPath(int r, int c) { //Never used by the program?
         grid[r][c] = PATH;
     }
 

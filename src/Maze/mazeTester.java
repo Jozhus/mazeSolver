@@ -13,11 +13,11 @@ public class mazeTester {
         Maze maze = new Maze(filename);
         mazeSolver solver = new mazeSolver(maze);
 
-        System.out.println(maze);
+        System.out.println("Original maze:\n" + maze);
 
         if (solver.traverse()) System.out.println("The maze was successfully traversed!");
         else System.out.println("There is no possible path.");
 
-        System.out.println(maze);
+        System.out.println("Maze solver result:\n" + maze);
     }
 }

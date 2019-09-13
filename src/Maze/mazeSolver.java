@@ -3,6 +3,11 @@ package Maze;
 import java.util.Deque;
 import java.util.LinkedList;
 
+/*
+mazeSolver solves an n, m maze where the start position is the
+top left cell (0, 0) and the end is the bottom right cell (n, m)
+*/
+
 public class mazeSolver {
 
     private Maze maze;
