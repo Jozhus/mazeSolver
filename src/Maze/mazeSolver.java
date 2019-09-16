@@ -1,7 +1,6 @@
 package Maze;
 
-import java.util.Deque;
-import java.util.LinkedList;
+import StackList.StackList;
 
 /*
 mazeSolver solves an n, m maze where the start position is the
@@ -21,7 +20,7 @@ public class mazeSolver {
         boolean done = false;
         int r, c;
         Position pos = new Position();
-        Deque<Position> stack = new LinkedList<Position>();
+        StackList<Position> stack = new StackList<Position>();
         stack.push(pos);
 
         while (!done && !stack.isEmpty()) {
@@ -41,7 +40,7 @@ public class mazeSolver {
         return done;
     }
 
-    private void push_new_pos(int x, int y, Deque<Position> stack) {
+    private void push_new_pos(int x, int y, StackList<Position> stack) {
         Position npos = new Position(x, y);
         if (maze.validPos(x, y)) stack.push(npos);
     }

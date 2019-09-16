@@ -1,0 +1,88 @@
+package StackList;
+
+/**
+ * Created by Jozhus on 9/5/2019.
+ */
+public class Client {
+
+    public static void main(String[] args) {
+        testPush();
+        testEmpty();
+        testPush9Elems();
+        testSimplePopElems();
+        testMultiplePopsElems();
+    }
+
+    private static void testPush() {
+        System.out.println("========================");
+        System.out.println("Testing pushing onto a Stack");
+        System.out.println("========================");
+        StackADT<Integer> stack = new StackList<Integer>();
+        stack.push(51);
+        stack.push(3);
+        for (int i = 0; i < 9; i++) {
+            stack.push(i);
+        }
+        System.out.println(stack);
+    }
+
+    private static void testEmpty() {
+        System.out.println("==================================");
+        System.out.println("Testing empty method for the Stack");
+        System.out.println("==================================");
+        StackADT<Integer> stack = new StackList<Integer>();
+        System.out.println("is empty should be true and is: " + stack.isEmpty());
+        System.out.println(stack);
+        stack.push(90);
+        System.out.println("is empty should be false and is: " + stack.isEmpty());
+        System.out.println(stack);
+        stack.pop();
+        System.out.println("is empty should be true and is: " + stack.isEmpty());
+        System.out.println(stack);
+    }
+
+    private static void testMultiplePopsElems() {
+        System.out.println("==================================================");
+        System.out.println("Testing calling multiple pops method for the Stack");
+        System.out.println("==================================================");
+        StackADT<Integer> stack = new StackList<Integer>();
+        for (int i = 0; i < 9; i++) {
+            stack.push(i);
+        }
+        System.out.println(stack);
+        Integer eight = stack.pop();
+        System.out.println("Eight: " + eight);
+        System.out.println(stack);
+        Integer seven = stack.pop();
+        System.out.println("Seven: " + seven);
+        System.out.println(stack);
+        Integer six = stack.pop();
+        System.out.println("Six: " + six);
+        System.out.println(stack);
+    }
+
+    private static void testSimplePopElems() {
+        System.out.println("============================================");
+        System.out.println("Testing calling one pop method for the Stack");
+        System.out.println("============================================");
+        StackADT<Integer> stack = new StackList<Integer>();
+        for (int i = 0; i < 9; i++) {
+            stack.push(i);
+        }
+        System.out.println(stack);
+        Integer lastElement = stack.pop();
+        System.out.println("the last element should be an 8 and is: " + lastElement);
+        System.out.println(stack);
+    }
+
+    private static void testPush9Elems() {
+        System.out.println("=======================================");
+        System.out.println("Testing pushing 9 elements to the Stack");
+        System.out.println("=======================================");
+        StackADT<Integer> stack = new StackList<Integer>();
+        for (int i = 0; i < 9; i++) {
+            stack.push(i);
+        }
+        System.out.println(stack);
+    }
+}
